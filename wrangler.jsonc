@@ -1,0 +1,8 @@
+// Cloudflare hosting settings: publishes this folder as a static website.
+{
+  "name": "jewels-by-betsa",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./"
+  }
+}

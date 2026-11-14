@@ -1,0 +1,8 @@
+# Files that are part of the project but should not be published on the website
+.git
+.gitignore
+.assetsignore
+README.md
+wrangler.jsonc
+node_modules
+.wrangler
