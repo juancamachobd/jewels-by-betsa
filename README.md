@@ -36,5 +36,6 @@ only appears when its contact detail is filled in.
 - [x] Git + GitHub repository (github.com/juancamachobd/jewels-by-betsa)
 - [x] Free hosting on Cloudflare (auto-publishes on every push to `main`)
 - [x] Domain: https://jewelsbybetsa.com
+- [x] Custom order form (WhatsApp + email)
 - [ ] Payments: Zelle QR, PayPal.me link, Stripe Payment Link
 - [ ] Products in a data file (add a piece without editing HTML)

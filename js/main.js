@@ -7,7 +7,7 @@
                    pedido llega directo al correo sin que el cliente abra
                    su app de correo.
      ------------------------------------------------------------------ */
-  var CONTACT = { whatsapp: "", email: "", web3formsKey: "" };
+  var CONTACT = { whatsapp: "18633351937", email: "betsabe.camacho.silva@gmail.com", web3formsKey: "" };
 
   var dict = {
     "nav.home":["Inicio","Home"],
