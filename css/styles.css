@@ -140,7 +140,7 @@ nav.links a:hover{border-color:var(--gold);}
     flex-direction:column;gap:0;padding:0;max-height:0;overflow:hidden;border-bottom:1px solid var(--border);
     transition:max-height .25s ease;
   }
-  nav.links.open{max-height:320px;}
+  nav.links.open{max-height:420px;}
   nav.links a{padding:14px 28px;width:100%;border-bottom:1px solid var(--border);}
   .menu-btn{display:block;}
 }
@@ -230,8 +230,57 @@ section.tight{padding:56px 0;}
 }
 .step h3{font-size:1.08rem;margin-bottom:8px;}
 .step p{margin:0;color:var(--muted);font-size:.92rem;}
-.order-cta{margin-top:38px;text-align:center;}
+.order-cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 @media (max-width:860px){.steps{grid-template-columns:1fr;}}
+
+/* ---------- Custom order form ---------- */
+.custom{background:var(--blush);}
+.custom-form{
+  max-width:860px;margin:0 auto;background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;padding:36px;box-shadow:var(--shadow);
+}
+.type-pick{border:0;padding:0;margin:0 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.type-pick legend{
+  font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.2rem;color:var(--ink);
+  padding:0;margin-bottom:14px;
+}
+.type-card{
+  position:relative;display:flex;flex-direction:column;gap:4px;cursor:pointer;
+  padding:18px 20px 18px 50px;border:1.5px solid var(--border);border-radius:4px;background:var(--linen);
+  transition:border-color .15s ease;
+}
+.type-card input{position:absolute;left:20px;top:22px;width:18px;height:18px;margin:0;accent-color:var(--wine);}
+.type-card:has(input:checked){border-color:var(--wine);}
+.type-card:has(input:focus-visible){outline:2px solid var(--wine);outline-offset:3px;}
+.type-name{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.1rem;color:var(--ink);}
+.type-note{font-size:.86rem;color:var(--muted);}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px;}
+.field-wide{grid-column:1 / -1;}
+.field label{display:flex;align-items:baseline;gap:9px;font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:7px;}
+.field-num{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:1.25rem;color:var(--gold);line-height:1;}
+.field input,.field textarea{
+  width:100%;font:inherit;font-size:.95rem;color:var(--ink);background:var(--linen);
+  border:1.5px solid var(--border);border-radius:3px;padding:.7rem .85rem;resize:vertical;
+}
+.field textarea{min-height:4.6rem;}
+#cf-otros{min-height:7.5rem;}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:.75;}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--wine);}
+.field input.invalid{border-color:#B3261E;}
+.contact-grid{margin-top:28px;padding-top:28px;border-top:1px solid var(--border);}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+.form-status{min-height:1.5em;margin:22px 0 0;font-weight:600;font-size:.92rem;color:var(--wine-strong);text-align:center;}
+.form-status.error{color:#B3261E;}
+:root[data-theme="dark"] .form-status.error{color:#F2B8B5;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .form-status.error{color:#F2B8B5;}}
+.send-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;}
+.send-row .btn[hidden]{display:none;}
+.form-note{margin:18px 0 0;text-align:center;color:var(--muted);font-size:.86rem;}
+@media (max-width:700px){
+  .custom-form{padding:24px 18px;}
+  .type-pick,.field-grid{grid-template-columns:1fr;}
+  .send-row .btn{width:100%;justify-content:center;}
+}
 
 /* ---------- Payment ---------- */
 .pay{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}

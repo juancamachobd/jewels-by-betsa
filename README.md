@@ -24,6 +24,12 @@ Every text has a Spanish and an English version. Change both in `js/main.js`
 (the `dict` list at the top: `"key": ["Español", "English"]`), and the Spanish
 one in `index.html` as well.
 
+## Custom orders ("Personaliza tu rosario")
+
+The form sends each request to Betsa by WhatsApp and/or email. Her contact
+details go in the `CONTACT` line at the top of `js/main.js`. A send button
+only appears when its contact detail is filled in.
+
 ## Roadmap
 
 - [x] Project folder with separate HTML / CSS / JS

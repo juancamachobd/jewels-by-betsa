@@ -30,6 +30,7 @@
       <a href="#fe" data-i18n="nav.faith">Nuestra fe</a>
       <a href="#motion" data-i18n="nav.motion">Video</a>
       <a href="#pedir" data-i18n="nav.order">Cómo pedir</a>
+      <a href="#personaliza" data-i18n="nav.custom">Personaliza</a>
       <a href="#contacto" data-i18n="nav.contact">Contacto</a>
     </nav>
     <div class="nav-right">
@@ -193,7 +194,84 @@
       </div>
       <div class="order-cta">
         <a class="btn btn-primary" href="https://www.instagram.com/jewelsbybetsa/" target="_blank" rel="noopener" data-i18n="order.dm.cta">Pedir por Instagram DM</a>
+        <a class="btn btn-ghost" href="#personaliza" data-i18n="order.custom.cta">Personaliza tu rosario</a>
       </div>
+    </div>
+  </section>
+
+  <section id="personaliza" class="custom">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker" data-i18n="custom.kicker">HECHO A TU MEDIDA</p>
+        <h2 data-i18n="custom.title">Personaliza tu rosario</h2>
+        <p data-i18n="custom.sub">Cuéntale a Betsa, detalle por detalle, cómo lo quieres. Ella recibe tu pedido y te responde con el precio y el tiempo de entrega.</p>
+      </div>
+
+      <form class="custom-form" id="customForm" novalidate data-reveal>
+        <fieldset class="type-pick">
+          <legend data-i18n="custom.type.legend">¿Qué quieres crear?</legend>
+          <label class="type-card">
+            <input type="radio" name="tipo" value="mano" checked>
+            <span class="type-name" data-i18n="custom.type.mano">Rosario de mano</span>
+            <span class="type-note" data-i18n="custom.type.mano.note">Pulsera — una decena para llevar en la muñeca</span>
+          </label>
+          <label class="type-card">
+            <input type="radio" name="tipo" value="collar">
+            <span class="type-name" data-i18n="custom.type.collar">Rosario de collar</span>
+            <span class="type-note" data-i18n="custom.type.collar.note">Rosario completo de cinco misterios</span>
+          </label>
+        </fieldset>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="cf-ave"><span class="field-num">1</span><span data-i18n="custom.ave.label">Cuentas del Ave María</span></label>
+            <textarea id="cf-ave" name="ave" rows="2" data-i18n-ph="custom.ave.ph" placeholder="Color, material y tamaño. Ej.: madera clara, cristal rosa…"></textarea>
+          </div>
+          <div class="field">
+            <label for="cf-padre"><span class="field-num">2</span><span data-i18n="custom.padre.label">Cuentas del Padre Nuestro</span></label>
+            <textarea id="cf-padre" name="padre" rows="2" data-i18n-ph="custom.padre.ph" placeholder="¿Iguales o diferentes a las demás? Color y material."></textarea>
+          </div>
+          <div class="field">
+            <label for="cf-cordon"><span class="field-num">3</span><span data-i18n="custom.cordon.label">Cordón o hilo</span></label>
+            <input type="text" id="cf-cordon" name="cordon" data-i18n-ph="custom.cordon.ph" placeholder="Ej.: café, negro, vino…">
+          </div>
+          <div class="field">
+            <label for="cf-cruz"><span class="field-num">4</span><span data-i18n="custom.cruz.label">Crucifijo o cruz</span></label>
+            <textarea id="cf-cruz" name="cruz" rows="2" data-i18n-ph="custom.cruz.ph" placeholder="Estilo, tamaño y color. Ej.: cruz plateada pequeña."></textarea>
+          </div>
+          <div class="field">
+            <label for="cf-medalla"><span class="field-num">5</span><span data-i18n="custom.medalla.label">Medalla, centro o dije</span></label>
+            <textarea id="cf-medalla" name="medalla" rows="2" data-i18n-ph="custom.medalla.ph" placeholder="Santo de tu devoción, la Virgen, corazón, flor…"></textarea>
+          </div>
+          <div class="field">
+            <label for="cf-medida"><span class="field-num">6</span><span id="medidaLabel" data-i18n="custom.medida.label.mano">Medida de tu muñeca</span></label>
+            <input type="text" id="cf-medida" name="medida" data-i18n-ph="custom.medida.ph.mano" placeholder="Pulgadas, cm, “adulto”, “niña”…">
+          </div>
+          <div class="field field-wide">
+            <label for="cf-otros"><span class="field-num">7</span><span data-i18n="custom.otros.label">Otros detalles</span></label>
+            <textarea id="cf-otros" name="otros" rows="4" data-i18n-ph="custom.otros.ph" placeholder="Nombre o iniciales, la ocasión, si es un regalo, para qué fecha lo necesitas… todo lo que ayude a que quede como lo imaginas."></textarea>
+          </div>
+        </div>
+
+        <div class="field-grid contact-grid">
+          <div class="field">
+            <label for="cf-nombre"><span data-i18n="custom.nombre.label">Tu nombre</span></label>
+            <input type="text" id="cf-nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-contacto"><span data-i18n="custom.contacto.label">¿Cómo te contactamos?</span></label>
+            <input type="text" id="cf-contacto" name="contacto" required data-i18n-ph="custom.contacto.ph" placeholder="Teléfono, correo o tu Instagram">
+          </div>
+        </div>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <div class="send-row">
+          <button type="button" class="btn btn-primary" id="sendWhatsapp" data-i18n="custom.send.wa">Enviar por WhatsApp</button>
+          <button type="button" class="btn btn-ghost" id="sendEmail" data-i18n="custom.send.email">Enviar por correo</button>
+        </div>
+        <p class="form-note" data-i18n="custom.note">Los pedidos personalizados no tienen precio fijo: Betsa te confirma el precio antes de empezar.</p>
+      </form>
     </div>
   </section>
 
