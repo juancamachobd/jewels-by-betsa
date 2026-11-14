@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jewels by Betsa — Rosarios y pulseras hechos a mano en Miami</title>
+  <meta name="description" content="Rosarios, pulseras y collares hechos a mano en Miami, con madera, cristal y mucha fe. Handmade rosaries and bracelets by Betsa.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jewels by Betsa">
+  <meta property="og:description" content="Rosarios, pulseras y collares hechos a mano en Miami — cada cuenta, una oración.">
+  <meta property="og:image" content="images/pulseras.jpg">
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="images/logo.jpg" alt="Jewels by Betsa logo">
+      <span class="brand-word">Jewels by Betsa</span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#top" data-i18n="nav.home">Inicio</a>
+      <a href="#coleccion" data-i18n="nav.collection">Colección</a>
+      <a href="#fe" data-i18n="nav.faith">Nuestra fe</a>
+      <a href="#motion" data-i18n="nav.motion">Video</a>
+      <a href="#pedir" data-i18n="nav.order">Cómo pedir</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+        <button type="button" id="btnEs" aria-pressed="true">ES</button>
+        <button type="button" id="btnEn" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="kicker" data-i18n="hero.kicker">PROVERBIOS 16:3</p>
+        <h1 data-i18n="hero.headline">Cada cuenta, una oración.</h1>
+        <p class="lede" data-i18n="hero.sub">Rosarios, pulseras y collares hechos a mano en Miami — pieza por pieza, con madera, cristal y mucha fe.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#coleccion" data-i18n="hero.cta1">Ver la colección</a>
+          <a class="btn btn-ghost" href="#pedir" data-i18n="hero.cta2">Hacer un pedido</a>
+        </div>
+      </div>
+      <div class="hero-art" data-reveal>
+        <img class="a" src="images/pulseras.jpg" alt="Pulseras de madera hechas a mano">
+        <img class="b" src="images/story.jpg" alt="Rosario de madera">
+        <span class="hero-caption" data-i18n="hero.photocaption">Piezas reales, hechas por Betsa.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight verse-band">
+    <div class="wrap">
+      <div class="bead-divider bead-divider--fg" aria-hidden="true" style="margin-bottom:6px;"></div>
+      <blockquote data-i18n="verse.quote">«Encomienda al Señor tus obras, y tus pensamientos serán afirmados.»</blockquote>
+      <cite data-i18n="verse.cite">Proverbios 16:3</cite>
+    </div>
+  </section>
+
+  <section id="coleccion">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker" data-i18n="section.collection.kicker">LA COLECCIÓN</p>
+        <h2 data-i18n="section.collection.title">Cuatro formas de llevar tu fe</h2>
+        <p data-i18n="section.collection.sub">Cada pieza se arma a mano, cuenta por cuenta, y ninguna sale exactamente igual a otra.</p>
+      </div>
+      <div class="grid-collection" data-reveal>
+        <div class="card">
+          <div class="thumb"><img src="images/rosarios.jpg" alt="Rosario de madera hecho a mano"></div>
+          <div class="body">
+            <h3 data-i18n="rosarios.title">Rosarios</h3>
+            <p data-i18n="rosarios.desc">Rosarios tradicionales de madera y cristal, armados a mano para rezar cada misterio.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="images/pulseras.jpg" alt="Pulseras de madera con dijes de cruz"></div>
+          <div class="body">
+            <h3 data-i18n="pulseras.title">Pulseras</h3>
+            <p data-i18n="pulseras.desc">Pulseras de madera con dijes de cruz y flor — para el día a día o para regalar.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="images/denarios.jpg" alt="Pulseras con medallas de santos"></div>
+          <div class="body">
+            <h3 data-i18n="denarios.title">Denarios</h3>
+            <p data-i18n="denarios.desc">Pulseras con medallas de tus santos favoritos, en madera natural.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="images/cristal.jpg" alt="Pulseras de cristal en tono rosa"></div>
+          <div class="body">
+            <h3 data-i18n="cristal.title">Cristal &amp; Color</h3>
+            <p data-i18n="cristal.desc">Pulseras de cristal en tonos rosa y coral, con dijes de corazón y cruz.</p>
+          </div>
+        </div>
+      </div>
+      <p class="collection-foot" data-i18n="collection.cta">Escríbenos por Instagram para ver disponibilidad.</p>
+    </div>
+  </section>
+
+  <section id="fe" class="faith">
+    <div class="wrap">
+      <figure class="faith-img" data-reveal>
+        <img src="images/story.jpg" alt="Rosario de madera guardado en el bolsillo">
+        <figcaption data-i18n="faith.imgcaption">Un rosario, siempre en el bolsillo derecho.</figcaption>
+      </figure>
+      <div class="faith-copy">
+        <p class="kicker" data-i18n="faith.kicker">NUESTRA FE</p>
+        <h2 data-i18n="faith.title">Hecho a mano, hecho con fe</h2>
+        <p data-i18n="faith.body1">Jewels by Betsa nació de una costumbre sencilla: llevar la fe en el bolsillo, en la muñeca, en el cuello. Cada rosario y cada pulsera se arma cuenta por cuenta, a mano, inspirado en Proverbios 16:3.</p>
+        <p data-i18n="faith.body2">No hay dos piezas iguales — y eso está bien. Están hechas para acompañarte, no para ser perfectas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="craft">
+    <div class="wrap">
+      <img src="images/craft.jpg" alt="Cuentas de madera y dijes de flor" data-reveal>
+      <div>
+        <p class="kicker" data-i18n="craft.kicker">EL PROCESO</p>
+        <h2 data-i18n="craft.title">Cuenta por cuenta</h2>
+        <p style="color:var(--muted);margin-top:14px;max-width:48ch;" data-i18n="craft.body">Madera natural, cristal facetado, cordón encerado y dijes en acero inoxidable — materiales sencillos, elegidos para durar y para acompañar tu día.</p>
+        <div class="swatches">
+          <div class="swatch"><i style="background:var(--clay)"></i><span data-i18n="material.wood">Madera</span></div>
+          <div class="swatch"><i style="background:var(--blush)"></i><span data-i18n="material.crystal">Cristal</span></div>
+          <div class="swatch"><i style="background:var(--wine)"></i><span data-i18n="material.cord">Cordón</span></div>
+          <div class="swatch"><i style="background:var(--gold)"></i><span data-i18n="material.silver">Plata</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="motion" class="tight">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker" data-i18n="motion.kicker">EN MOVIMIENTO</p>
+        <h2 data-i18n="motion.title">Míralo en video</h2>
+        <p data-i18n="motion.sub">Clips reales de nuestro Instagram — así se ven las piezas en la vida real.</p>
+      </div>
+      <div class="grid-video" data-reveal>
+        <figure class="video-card">
+          <video src="videos/motion1.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <figcaption data-i18n="video1.caption">Terminando los detalles</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video src="videos/motion2.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <figcaption data-i18n="video2.caption">Cuenta por cuenta</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video src="videos/motion3.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          <figcaption data-i18n="video3.caption">Lista para regalar</figcaption>
+        </figure>
+      </div>
+      <p class="collection-foot"><a href="https://www.instagram.com/jewelsbybetsa/" target="_blank" rel="noopener" data-i18n="motion.cta">Ver más en Instagram</a></p>
+    </div>
+  </section>
+
+  <section id="pedir">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker" data-i18n="order.kicker">CÓMO PEDIR</p>
+        <h2 data-i18n="order.title">De tu mensaje a tu muñeca</h2>
+      </div>
+      <div class="steps" data-reveal>
+        <div class="step">
+          <span class="num">1</span>
+          <h3 data-i18n="step1.title">Elige tu estilo</h3>
+          <p data-i18n="step1.body">Explora la colección y cuéntanos qué pieza te gustó.</p>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <h3 data-i18n="step2.title">Personalízalo</h3>
+          <p data-i18n="step2.body">Elige colores, dije o el santo de tu devoción.</p>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <h3 data-i18n="step3.title">Recíbelo con una bendición</h3>
+          <p data-i18n="step3.body">Confirmamos los detalles y tu pieza se hace a mano, solo para ti.</p>
+        </div>
+      </div>
+      <div class="order-cta">
+        <a class="btn btn-primary" href="https://www.instagram.com/jewelsbybetsa/" target="_blank" rel="noopener" data-i18n="order.dm.cta">Pedir por Instagram DM</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pay">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="kicker" data-i18n="pay.kicker">FORMAS DE PAGO</p>
+        <h2 data-i18n="pay.title">Pronto, pagar aquí mismo</h2>
+        <p data-i18n="pay.body">Por ahora, cada pedido se confirma por Instagram. Estamos preparando pagos directos con estas opciones:</p>
+      </div>
+      <!-- Placeholder only — wire real payment links/buttons here when ready (e.g. Zelle QR, PayPal.me link, Stripe payment link). -->
+      <div class="pay-methods">
+        <div class="pay-card"><div class="method">Zelle</div><span class="soon" data-i18n="pay.soon">Próximamente</span></div>
+        <div class="pay-card"><div class="method">PayPal</div><span class="soon" data-i18n="pay.soon">Próximamente</span></div>
+        <div class="pay-card"><div class="method" data-i18n="pay.card">Tarjeta</div><span class="soon" data-i18n="pay.soon">Próximamente</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div>
+      <span class="brand-word">Jewels by Betsa</span>
+      <p data-i18n="footer.tag">Hecho a mano en Miami, con fe.</p>
+      <a class="ig" href="https://www.instagram.com/jewelsbybetsa/" target="_blank" rel="noopener">@jewelsbybetsa ↗</a>
+    </div>
+    <div>
+      <p class="kicker" style="color:var(--gold)" data-i18n="footer.follow">SÍGUENOS</p>
+      <p style="margin-top:8px;" data-i18n="verse.cite">Proverbios 16:3</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Jewels by Betsa</span>
+    <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
