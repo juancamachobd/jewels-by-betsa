@@ -27,8 +27,8 @@ one in `index.html` as well.
 ## Roadmap
 
 - [x] Project folder with separate HTML / CSS / JS
-- [ ] Git + GitHub repository
-- [ ] Free hosting (Cloudflare Pages / Netlify / GitHub Pages)
-- [ ] Domain: jewelsbybetsa.com
+- [x] Git + GitHub repository (github.com/juancamachobd/jewels-by-betsa)
+- [x] Free hosting on Cloudflare (auto-publishes on every push to `main`)
+- [x] Domain: https://jewelsbybetsa.com
 - [ ] Payments: Zelle QR, PayPal.me link, Stripe Payment Link
 - [ ] Products in a data file (add a piece without editing HTML)
