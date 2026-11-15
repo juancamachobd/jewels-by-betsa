@@ -57,7 +57,7 @@
     "custom.ok.sent":["¡Pedido enviado! Betsa te escribirá pronto.","Request sent! Betsa will be in touch soon."],
     "hero.kicker":["PROVERBIOS 16:3","PROVERBS 16:3"],
     "hero.headline":["Cada cuenta, una oración.","Every bead, a prayer."],
-    "hero.sub":["Rosarios, pulseras y collares hechos a mano — pieza por pieza, con madera, cristal y mucha fe.","Rosaries, bracelets, and necklaces handmade — one bead at a time, in wood, crystal, and faith."],
+    "hero.sub":["Rosarios, pulseras y collares hechos a mano — pieza por pieza, con madera, cristal y mucha fe.","Handmade rosaries, bracelets, and necklaces — one bead at a time, in wood, crystal, and faith."],
     "hero.cta1":["Ver la colección","View the collection"],
     "hero.cta2":["Hacer un pedido","Place an order"],
     "hero.photocaption":["Piezas reales, hechas por Betsa.","Real pieces, handmade by Betsa."],
