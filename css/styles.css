@@ -192,7 +192,7 @@ section.tight{padding:56px 0;}
 .thumb-duo{position:relative;cursor:pointer;}
 .thumb-duo img{position:absolute;inset:0;opacity:0;transition:opacity .4s ease, transform .5s ease;}
 .thumb-duo img.on{opacity:1;}
-.duo-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:4px;}
+.duo-dots{position:absolute;right:8px;bottom:8px;display:flex;gap:2px;}
 .duo-dots button{
   width:28px;height:28px;padding:0;border:0;background:transparent;cursor:pointer;
   display:grid;place-items:center;
