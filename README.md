@@ -1,6 +1,6 @@
 # Jewels by Betsa
 
-Sitio web de Jewels by Betsa — rosarios, pulseras y collares hechos a mano en Miami.
+Sitio web de Jewels by Betsa — rosarios, pulseras y collares hechos a mano.
 Static website (HTML + CSS + JavaScript, no build step).
 
 ## Structure

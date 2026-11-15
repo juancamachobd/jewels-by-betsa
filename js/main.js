@@ -57,7 +57,7 @@
     "custom.ok.sent":["¡Pedido enviado! Betsa te escribirá pronto.","Request sent! Betsa will be in touch soon."],
     "hero.kicker":["PROVERBIOS 16:3","PROVERBS 16:3"],
     "hero.headline":["Cada cuenta, una oración.","Every bead, a prayer."],
-    "hero.sub":["Rosarios, pulseras y collares hechos a mano en Miami — pieza por pieza, con madera, cristal y mucha fe.","Rosaries, bracelets, and necklaces handmade in Miami — one bead at a time, in wood, crystal, and faith."],
+    "hero.sub":["Rosarios, pulseras y collares hechos a mano — pieza por pieza, con madera, cristal y mucha fe.","Rosaries, bracelets, and necklaces handmade — one bead at a time, in wood, crystal, and faith."],
     "hero.cta1":["Ver la colección","View the collection"],
     "hero.cta2":["Hacer un pedido","Place an order"],
     "hero.photocaption":["Piezas reales, hechas por Betsa.","Real pieces, handmade by Betsa."],
@@ -108,7 +108,7 @@
     "pay.body":["Por ahora, cada pedido se confirma por Instagram. Estamos preparando pagos directos con estas opciones:","For now, every order is confirmed over Instagram. We're getting these direct payment options ready:"],
     "pay.soon":["Próximamente","Coming soon"],
     "pay.card":["Tarjeta","Card"],
-    "footer.tag":["Hecho a mano en Miami, con fe.","Handmade in Miami, with faith."],
+    "footer.tag":["Hecho a mano, con fe.","Handmade, with faith."],
     "footer.follow":["SÍGUENOS","FOLLOW US"],
     "footer.rights":["Todos los derechos reservados.","All rights reserved."]
   };
