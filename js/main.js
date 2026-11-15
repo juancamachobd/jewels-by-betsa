@@ -67,13 +67,13 @@
     "section.collection.title":["Cuatro formas de llevar tu fe","Four ways to wear your faith"],
     "section.collection.sub":["Cada pieza se arma a mano, cuenta por cuenta, y ninguna sale exactamente igual a otra.","Every piece is assembled by hand, bead by bead — no two come out exactly alike."],
     "rosarios.title":["Rosarios","Rosaries"],
-    "rosarios.desc":["Rosarios tradicionales de madera y cristal, armados a mano para rezar cada misterio.","Traditional wood and crystal rosaries, hand-strung for praying every mystery."],
-    "pulseras.title":["Pulseras","Bracelets"],
-    "pulseras.desc":["Pulseras de madera con dijes de cruz y flor — para el día a día o para regalar.","Wood bracelets with cross and flower charms — everyday wear or the perfect gift."],
-    "denarios.title":["Denarios","Charm Medals"],
-    "denarios.desc":["Pulseras con medallas de tus santos favoritos, en madera natural.","Bracelets set with medals of your favorite saints, in natural wood."],
-    "cristal.title":["Cristal & Color","Crystal & Color"],
-    "cristal.desc":["Pulseras de cristal en tonos rosa y coral, con dijes de corazón y cruz.","Crystal bracelets in blush and coral tones, with heart and cross charms."],
+    "rosarios.desc":["Rosarios completos de cinco misterios, en piedra, cristal o madera, con centro y crucifijo.","Full five-decade rosaries in stone, crystal or wood, with a center medal and crucifix."],
+    "pulseras.title":["Rosario-pulseras","Rosary Bracelets"],
+    "pulseras.desc":["El rosario completo que se enrolla en tu muñeca — para llevarlo y rezarlo todos los días.","The full rosary that wraps around your wrist — to wear and pray every day."],
+    "denarios.title":["Denarios","Decade Rosaries"],
+    "denarios.desc":["En madera natural y cordón, con cruz y medallas de tus santos favoritos.","In natural wood and cord, with a cross and medals of your favorite saints."],
+    "llaveros.title":["Llaveros-Denarios","Keychain Decades"],
+    "llaveros.desc":["Una decena para llevar contigo — en la muñeca, en el bolso o con tus llaves.","One decade to carry with you — on your wrist, on your bag or with your keys."],
     "collection.cta":["Escríbenos por Instagram para ver disponibilidad.","Message us on Instagram to check availability."],
     "faith.kicker":["NUESTRA FE","OUR FAITH"],
     "faith.title":["Hecho a mano, hecho con fe","Handmade, held in faith"],
@@ -135,6 +135,20 @@
   document.getElementById("btnEs").addEventListener("click", function(){ setLang("es"); });
   document.getElementById("btnEn").addEventListener("click", function(){ setLang("en"); });
   setLang(getLang());
+
+  /* ---------- Tarjetas con dos fotos ---------- */
+  document.querySelectorAll("[data-duo]").forEach(function(duo){
+    var imgs = duo.querySelectorAll("img"), dots = duo.querySelectorAll(".duo-dots button");
+    function show(n){
+      imgs.forEach(function(im, i){ im.classList.toggle("on", i === n); });
+      dots.forEach(function(d, i){ d.setAttribute("aria-pressed", String(i === n)); });
+    }
+    dots.forEach(function(d, i){ d.addEventListener("click", function(e){ e.stopPropagation(); show(i); }); });
+    duo.addEventListener("click", function(){
+      var cur = 0; imgs.forEach(function(im, i){ if(im.classList.contains("on")) cur = i; });
+      show((cur + 1) % imgs.length);
+    });
+  });
 
   /* ---------- Pedido personalizado ---------- */
   var form = document.getElementById("customForm");
