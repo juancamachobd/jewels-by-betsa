@@ -311,6 +311,16 @@ section.tight{padding:56px 0;}
   display:inline-block;margin-top:10px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
   background:var(--blush);color:var(--wine-strong);padding:4px 10px;border-radius:999px;
 }
+a.pay-card-live{
+  display:block;text-decoration:none;border-style:solid;border-color:var(--wine);
+  transition:transform .15s ease;
+}
+a.pay-card-live:hover{transform:translateY(-2px);}
+a.pay-card-live:focus-visible{outline:2px solid var(--wine);outline-offset:3px;}
+.pay-go{
+  display:inline-block;margin-top:10px;font-size:.8rem;font-weight:700;
+  background:var(--wine);color:var(--surface);padding:6px 14px;border-radius:999px;
+}
 @media (max-width:700px){.pay-methods{grid-template-columns:1fr;}}
 
 /* ---------- Footer ---------- */
