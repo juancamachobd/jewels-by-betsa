@@ -9,132 +9,27 @@
      ------------------------------------------------------------------ */
   var CONTACT = { whatsapp: "18633351937", email: "betsabe.camacho.silva@gmail.com", web3formsKey: "" };
 
-  var dict = {
-    "nav.home":["Inicio","Home"],
-    "nav.collection":["Colección","Collection"],
-    "nav.faith":["Nuestra fe","Our Faith"],
-    "nav.motion":["Video","Video"],
-    "nav.order":["Cómo pedir","How to Order"],
-    "nav.contact":["Contacto","Contact"],
-    "nav.custom":["Personaliza","Customize"],
-    "order.custom.cta":["Personaliza tu rosario","Customize your rosary"],
-    "custom.kicker":["HECHO A TU MEDIDA","MADE FOR YOU"],
-    "custom.title":["Personaliza tu rosario","Design your own rosary"],
-    "custom.sub":["Cuéntale a Betsa, detalle por detalle, cómo lo quieres. Ella recibe tu pedido y te responde con el precio y el tiempo de entrega.","Tell Betsa, detail by detail, how you want it. She receives your request and replies with the price and delivery time."],
-    "custom.type.legend":["¿Qué quieres crear?","What would you like to create?"],
-    "custom.type.mano":["Rosario de mano","Hand rosary"],
-    "custom.type.mano.note":["Pulsera — una decena para llevar en la muñeca","Bracelet — one decade to wear on your wrist"],
-    "custom.type.collar":["Rosario de collar","Necklace rosary"],
-    "custom.type.collar.note":["Rosario completo de cinco misterios","Full five-decade rosary"],
-    "custom.ave.label":["Cuentas del Ave María","Hail Mary beads"],
-    "custom.ave.ph":["Color, material y tamaño. Ej.: madera clara, cristal rosa…","Color, material and size. E.g. light wood, pink crystal…"],
-    "custom.padre.label":["Cuentas del Padre Nuestro","Our Father beads"],
-    "custom.padre.ph":["¿Iguales o diferentes a las demás? Color y material.","Same as the others or different? Color and material."],
-    "custom.cordon.label":["Cordón o hilo","Cord or thread"],
-    "custom.cordon.ph":["Ej.: café, negro, vino…","E.g. brown, black, wine…"],
-    "custom.cruz.label":["Crucifijo o cruz","Crucifix or cross"],
-    "custom.cruz.ph":["Estilo, tamaño y color. Ej.: cruz plateada pequeña.","Style, size and color. E.g. small silver cross."],
-    "custom.medalla.label":["Medalla, centro o dije","Medal, center or charm"],
-    "custom.medalla.ph":["Santo de tu devoción, la Virgen, corazón, flor…","Your patron saint, Our Lady, a heart, a flower…"],
-    "custom.medida.label.mano":["Medida de tu muñeca","Your wrist size"],
-    "custom.medida.label.collar":["Largo del rosario","Rosary length"],
-    "custom.medida.ph.mano":["Pulgadas, cm, “adulto”, “niña”…","Inches, cm, “adult”, “child”…"],
-    "custom.medida.ph.collar":["Tradicional, más corto, más largo…","Traditional, shorter, longer…"],
-    "custom.otros.label":["Otros detalles","Other details"],
-    "custom.otros.ph":["Nombre o iniciales, la ocasión, si es un regalo, para qué fecha lo necesitas… todo lo que ayude a que quede como lo imaginas.","A name or initials, the occasion, whether it's a gift, the date you need it by… anything that helps it turn out the way you imagine."],
-    "custom.nombre.label":["Tu nombre","Your name"],
-    "custom.contacto.label":["¿Cómo te contactamos?","How can we reach you?"],
-    "custom.contacto.ph":["Teléfono, correo o tu Instagram","Phone, email or your Instagram"],
-    "custom.send.wa":["Enviar por WhatsApp","Send via WhatsApp"],
-    "custom.send.email":["Enviar por correo","Send by email"],
-    "custom.note":["Los pedidos personalizados no tienen precio fijo: Betsa te confirma el precio antes de empezar.","Custom orders have no fixed price: Betsa confirms the price with you before she starts."],
-    "custom.err.required":["Escribe tu nombre y cómo contactarte.","Please add your name and how to reach you."],
-    "custom.err.empty":["Cuéntanos al menos un detalle de tu rosario.","Tell us at least one detail about your rosary."],
-    "custom.err.send":["No se pudo enviar. Inténtalo de nuevo o escríbenos por Instagram.","It couldn't be sent. Please try again or message us on Instagram."],
-    "custom.sending":["Enviando…","Sending…"],
-    "custom.ok.wa":["Se abrió WhatsApp con tu pedido — solo presiona enviar.","WhatsApp opened with your request — just press send."],
-    "custom.ok.mail":["Se abrió tu correo con el pedido — solo presiona enviar.","Your email app opened with the request — just press send."],
-    "custom.ok.sent":["¡Pedido enviado! Betsa te escribirá pronto.","Request sent! Betsa will be in touch soon."],
-    "hero.kicker":["PROVERBIOS 16:3","PROVERBS 16:3"],
-    "hero.headline":["Cada cuenta, una oración.","Every bead, a prayer."],
-    "hero.sub":["Rosarios, pulseras y collares hechos a mano — pieza por pieza, con madera, cristal y mucha fe.","Handmade rosaries, bracelets, and necklaces — one bead at a time, in wood, crystal, and faith."],
-    "hero.cta1":["Ver la colección","View the collection"],
-    "hero.cta2":["Hacer un pedido","Place an order"],
-    "hero.photocaption":["Piezas reales, hechas por Betsa.","Real pieces, handmade by Betsa."],
-    "verse.quote":["«Encomienda al Señor tus obras, y tus pensamientos serán afirmados.»","“Commit to the LORD whatever you do, and He will establish your plans.”"],
-    "verse.cite":["Proverbios 16:3","Proverbs 16:3"],
-    "section.collection.kicker":["LA COLECCIÓN","THE COLLECTION"],
-    "section.collection.title":["Cuatro formas de llevar tu fe","Four ways to wear your faith"],
-    "section.collection.sub":["Cada pieza se arma a mano, cuenta por cuenta, y ninguna sale exactamente igual a otra.","Every piece is assembled by hand, bead by bead — no two come out exactly alike."],
-    "rosarios.title":["Rosarios","Rosaries"],
-    "rosarios.desc":["Rosarios completos de cinco misterios, en piedra, cristal o madera, con centro y crucifijo.","Full five-decade rosaries in stone, crystal or wood, with a center medal and crucifix."],
-    "pulseras.title":["Rosario-pulseras","Rosary Bracelets"],
-    "pulseras.desc":["El rosario completo que se enrolla en tu muñeca — para llevarlo y rezarlo todos los días.","The full rosary that wraps around your wrist — to wear and pray every day."],
-    "denarios.title":["Denarios","Decade Rosaries"],
-    "denarios.desc":["En madera natural y cordón, con cruz y medallas de tus santos favoritos.","In natural wood and cord, with a cross and medals of your favorite saints."],
-    "llaveros.title":["Llaveros-Denarios","Keychain Decades"],
-    "llaveros.desc":["Una decena para llevar contigo — en la muñeca, en el bolso o con tus llaves.","One decade to carry with you — on your wrist, on your bag or with your keys."],
-    "collection.cta":["Escríbenos por Instagram para ver disponibilidad.","Message us on Instagram to check availability."],
-    "faith.kicker":["NUESTRA FE","OUR FAITH"],
-    "faith.title":["Hecho a mano, hecho con fe","Handmade, held in faith"],
-    "faith.body1":["Jewels by Betsa nació desde un cuarto, en la mente de una adolescente con las ganas de poder llevar la fe hacia los demás de alguna forma. Así que cada rosario, pulsera, llavero y denario lo hago con muchísimo amor; hay un proceso de oración por cada uno, para que cuando llegue a tus manos esté listo para que reces y lleves tu fe contigo siempre.","Jewels by Betsa was born in a bedroom, in the mind of a teenager who longed to bring the faith to others in some way. So I make every rosary, bracelet, keychain and decade with so much love; each one goes through its own time of prayer, so that when it reaches your hands it is ready for you to pray and carry your faith with you always."],
-    "faith.body2":["Betsa espera que cada pieza sea útil para que todos podamos rezar, llevar nuestra fe siempre con nosotros y recordar lo amados que somos de nuestro Padre, cómo María siempre nos lleva hacia Él, y que nuestro camino a la santidad tiene luz a pesar de las dificultades que encontremos en el camino, ya que es guiado por Jesús, María y José ❤️","Betsa hopes every piece helps us all to pray, to keep our faith always with us, and to remember how loved we are by our Father, how Mary always leads us to Him, and that our path to holiness has light despite the difficulties we meet along the way, because it is guided by Jesus, Mary and Joseph ❤️"],
-    "faith.imgcaption":["Un rosario, siempre en el bolsillo derecho.","A rosary, always in the right pocket."],
-    "craft.kicker":["EL PROCESO","THE PROCESS"],
-    "craft.title":["Cuenta por cuenta","Bead by bead"],
-    "craft.body":["Madera natural, cristal facetado, cordón encerado y dijes en acero inoxidable — materiales sencillos, elegidos para durar y para acompañar tu día.","Natural wood, faceted crystal, waxed cord, and stainless steel charms — simple materials, chosen to last and go through the day with you."],
-    "material.wood":["Madera","Wood"],
-    "material.crystal":["Cristal","Crystal"],
-    "material.cord":["Cordón","Cord"],
-    "material.silver":["Plata","Silver"],
-    "motion.kicker":["EN MOVIMIENTO","IN MOTION"],
-    "motion.title":["Míralo en video","See it in motion"],
-    "motion.sub":["Clips reales de nuestro Instagram — así se ven las piezas en la vida real.","Real clips from our Instagram — see how the pieces look in real life."],
-    "video1.caption":["Terminando los detalles","Finishing touches"],
-    "video2.caption":["Cuenta por cuenta","Bead by bead"],
-    "video3.caption":["Lista para regalar","Ready to gift"],
-    "motion.cta":["Ver más en Instagram","See more on Instagram"],
-    "order.kicker":["CÓMO PEDIR","HOW TO ORDER"],
-    "order.title":["De tu mensaje a tu muñeca","From your message to your wrist"],
-    "step1.title":["Elige tu estilo","Choose your style"],
-    "step1.body":["Explora la colección y cuéntanos qué pieza te gustó.","Browse the collection and tell us which piece caught your eye."],
-    "step2.title":["Personalízalo","Make it yours"],
-    "step2.body":["Elige colores, dije o el santo de tu devoción.","Pick your colors, charm, or patron saint."],
-    "step3.title":["Recíbelo con una bendición","Receive it, blessed"],
-    "step3.body":["Confirmamos los detalles y tu pieza se hace a mano, solo para ti.","We confirm the details and your piece is handmade, just for you."],
-    "order.dm.cta":["Pedir por Instagram DM","Order via Instagram DM"],
-    "pay.kicker":["FORMAS DE PAGO","PAYMENT OPTIONS"],
-    "pay.title":["Pronto, pagar aquí mismo","Soon, pay right here"],
-    "pay.body":["Por ahora, cada pedido se confirma por Instagram. Estamos preparando pagos directos con estas opciones:","For now, every order is confirmed over Instagram. We're getting these direct payment options ready:"],
-    "pay.soon":["Próximamente","Coming soon"],
-    "pay.card":["Tarjeta","Card"],
-    "footer.tag":["Hecho a mano, con fe.","Handmade, with faith."],
-    "footer.follow":["SÍGUENOS","FOLLOW US"],
-    "footer.rights":["Todos los derechos reservados.","All rights reserved."]
-  };
+  var dict = window.JBB_I18N || {};
 
-  var LANG_KEY = "jbb_lang";
+  // Each language is its own page (/ in Spanish, /en/ in English).
+  // The page's <html lang> decides which texts are used.
   function getLang(){
-    try { return localStorage.getItem(LANG_KEY) || "es"; } catch(e){ return "es"; }
+    return document.documentElement.getAttribute("lang") === "en" ? "en" : "es";
   }
-  function setLang(lang){
-    var idx = lang === "en" ? 1 : 0;
-    document.querySelectorAll("[data-i18n]").forEach(function(el){
-      var key = el.getAttribute("data-i18n");
-      if(dict[key]) el.textContent = dict[key][idx];
-    });
-    document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
-      var key = el.getAttribute("data-i18n-ph");
-      if(dict[key]) el.setAttribute("placeholder", dict[key][idx]);
-    });
-    document.getElementById("btnEs").setAttribute("aria-pressed", String(lang==="es"));
-    document.getElementById("btnEn").setAttribute("aria-pressed", String(lang==="en"));
-    try { document.documentElement.setAttribute("lang", lang); } catch(e){}
-    try { localStorage.setItem(LANG_KEY, lang); } catch(e){}
+  function applyTexts(){
+    var idx = getLang() === "en" ? 1 : 0;
+    function each(attr, fn){
+      document.querySelectorAll("[" + attr + "]").forEach(function(el){
+        var key = el.getAttribute(attr);
+        if(dict[key]) fn(el, dict[key][idx]);
+      });
+    }
+    each("data-i18n", function(el, v){ el.textContent = v; });
+    each("data-i18n-ph", function(el, v){ el.setAttribute("placeholder", v); });
+    each("data-i18n-alt", function(el, v){ el.setAttribute("alt", v); });
+    each("data-i18n-aria", function(el, v){ el.setAttribute("aria-label", v); });
   }
-  document.getElementById("btnEs").addEventListener("click", function(){ setLang("es"); });
-  document.getElementById("btnEn").addEventListener("click", function(){ setLang("en"); });
-  setLang(getLang());
+  applyTexts();
 
   /* ---------- Tarjetas con dos fotos ---------- */
   document.querySelectorAll("[data-duo]").forEach(function(duo){

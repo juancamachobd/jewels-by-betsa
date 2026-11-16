@@ -7,22 +7,29 @@ Static website (HTML + CSS + JavaScript, no build step).
 
 | Path | What it is |
 |---|---|
-| `index.html` | The page: all sections and the Spanish text |
+| `index.html` | Spanish page (jewelsbybetsa.com) and the page structure |
+| `en/index.html` | English page (jewelsbybetsa.com/en/) — generated, do not edit by hand |
+| `js/i18n.js` | **Every text on the site**, in Spanish and English |
+| `js/main.js` | Mobile menu, photo switcher, custom-order form |
 | `css/styles.css` | All styling (colors are the variables at the top) |
-| `js/main.js` | ES/EN translations, mobile menu, scroll animations |
-| `images/` | Logo and product photos |
-| `videos/` | Instagram clips shown in the "Video" section |
+| `images/`, `videos/` | Photos and clips |
+| `build.js` | Writes both language pages and `sitemap.xml` from the texts |
+| `sitemap.xml`, `robots.txt` | Tell search engines which pages exist |
 
 ## Preview on this computer
 
-Double-click `index.html`, or in VS Code install the **Live Server** extension,
-right-click `index.html` and choose **Open with Live Server**.
+In VS Code install the **Live Server** extension, right-click `index.html`
+and choose **Open with Live Server**.
 
 ## Editing text
 
-Every text has a Spanish and an English version. Change both in `js/main.js`
-(the `dict` list at the top: `"key": ["Español", "English"]`), and the Spanish
-one in `index.html` as well.
+1. Change the text in `js/i18n.js` — each line is `"key": ["Español", "English"]`.
+2. Run `node build.js` in the project folder. This rewrites `index.html`,
+   `en/index.html` and `sitemap.xml` so search engines see the new text.
+3. Commit and push; Cloudflare publishes automatically.
+
+Page titles and Google descriptions are the `meta.title` and `meta.desc`
+lines in `js/i18n.js`. Image descriptions are the `alt.*` lines.
 
 ## Custom orders ("Personaliza tu rosario")
 
@@ -37,5 +44,8 @@ only appears when its contact detail is filled in.
 - [x] Free hosting on Cloudflare (auto-publishes on every push to `main`)
 - [x] Domain: https://jewelsbybetsa.com
 - [x] Custom order form (WhatsApp + email)
+- [x] SEO: separate Spanish/English pages with hreflang, sitemap, Organization markup
+- [ ] Register the site in Google Search Console and submit sitemap.xml
+- [ ] Product markup (needs the priced catalog)
 - [ ] Payments: Zelle QR, PayPal.me link, Stripe Payment Link
 - [ ] Products in a data file (add a piece without editing HTML)
