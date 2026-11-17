@@ -22,6 +22,21 @@ const sandbox = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(root, "js/i18n.js"), "utf8"), sandbox);
 const dict = sandbox.window.JBB_I18N;
 
+// Price range of each category, in US dollars: [lowest, highest].
+// Change the numbers here, then run  node build.js
+const PRICES = {
+  rosarios: [20, 25],
+  pulseras: [10, 17],
+  denarios: [8, 12],
+  llaveros: [12, 18],
+};
+const PRODUCT_IMAGES = {
+  rosarios: "rosario-collar.jpg",
+  pulseras: "rosario-pulsera.jpg",
+  denarios: "denario-madera.jpg",
+  llaveros: "llavero-denario-rosa.jpg",
+};
+
 const LANGS = [
   { code: "es", idx: 0, dir: "", url: SITE + "/", locale: "es_US" },
   { code: "en", idx: 1, dir: "en", url: SITE + "/en/", locale: "en_US" },
@@ -51,7 +66,24 @@ function seoBlock(lang) {
     logo: SITE + "/images/logo.jpg",
     image: SITE + "/images/og-jewels-by-betsa.jpg",
     description: t("meta.desc"),
-    sameAs: ["https://www.instagram.com/jewelsbybetsa/"],
+    sameAs: ["https://www.instagram.com/jewelsbybetsa/", "https://www.tiktok.com/@jewelsbybetsa"],
+  };
+  const products = {
+    "@context": "https://schema.org",
+    "@graph": Object.keys(PRICES).map((k) => ({
+      "@type": "Product",
+      name: t(k + ".title"),
+      description: t(k + ".desc"),
+      image: SITE + "/images/" + PRODUCT_IMAGES[k],
+      url: lang.url + "#coleccion",
+      brand: { "@type": "Brand", name: "Jewels by Betsa" },
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "USD",
+        lowPrice: PRICES[k][0],
+        highPrice: PRICES[k][1],
+      },
+    })),
   };
   return [
     `<title>${esc(t("meta.title"))}</title>`,
@@ -67,6 +99,7 @@ function seoBlock(lang) {
     `<meta property="og:url" content="${lang.url}">`,
     `<meta property="og:locale" content="${lang.locale}">`,
     `<script type="application/ld+json">${JSON.stringify(org).replace(/</g, "\\u003c")}</script>`,
+    `<script type="application/ld+json">${JSON.stringify(products).replace(/</g, "\\u003c")}</script>`,
   ].map((l) => "  " + l).join("\n");
 }
 
@@ -87,6 +120,12 @@ function render(template, lang) {
   // Element text: <tag ... data-i18n="key" ...>text</tag>
   html = html.replace(/(<(\w+)\b[^>]*\bdata-i18n="([^"]+)"[^>]*>)([^<]*)(<\/\2>)/g,
     (m, open, tag, key, old, close) => open + esc(text(key, lang.idx)) + close);
+
+  // Price ranges: <div class="price" data-price="rosarios">$20 – $25 USD</div>
+  html = html.replace(/(<div class="price" data-price="(\w+)">)[^]*?(<\/div>)/g, (m, open, key, close) => {
+    if (!PRICES[key]) throw new Error("No price for: " + key);
+    return open + "$" + PRICES[key][0] + " – $" + PRICES[key][1] + " <small>USD</small>" + close;
+  });
 
   // Attributes: placeholder / alt / aria-label
   const attrs = [["data-i18n-ph", "placeholder"], ["data-i18n-alt", "alt"], ["data-i18n-aria", "aria-label"], ["data-i18n-href", "href"]];

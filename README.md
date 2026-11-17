@@ -31,6 +31,11 @@ and choose **Open with Live Server**.
 Page titles and Google descriptions are the `meta.title` and `meta.desc`
 lines in `js/i18n.js`. Image descriptions are the `alt.*` lines.
 
+## Prices
+
+The price range under each collection card is set at the top of `build.js`
+(`PRICES`, in US dollars). Change the numbers and run `node build.js`.
+
 ## Custom orders ("Personaliza tu rosario")
 
 The form sends each request to Betsa by WhatsApp and/or email. Her contact
@@ -46,7 +51,7 @@ only appears when its contact detail is filled in.
 - [x] Custom order form (WhatsApp + email)
 - [x] SEO: separate Spanish/English pages with hreflang, sitemap, Organization markup
 - [ ] Register the site in Google Search Console and submit sitemap.xml
-- [ ] Product markup (needs the priced catalog)
+- [x] Price ranges on the collection cards + Product markup
 - [x] Payments: PayPal.me link, Zelle QR
 - [ ] Payments: Stripe Payment Link for cards
 - [ ] Products in a data file (add a piece without editing HTML)
