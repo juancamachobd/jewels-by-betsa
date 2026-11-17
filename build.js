@@ -89,7 +89,7 @@ function render(template, lang) {
     (m, open, tag, key, old, close) => open + esc(text(key, lang.idx)) + close);
 
   // Attributes: placeholder / alt / aria-label
-  const attrs = [["data-i18n-ph", "placeholder"], ["data-i18n-alt", "alt"], ["data-i18n-aria", "aria-label"]];
+  const attrs = [["data-i18n-ph", "placeholder"], ["data-i18n-alt", "alt"], ["data-i18n-aria", "aria-label"], ["data-i18n-href", "href"]];
   html = html.replace(/<(\w+)\b[^>]*>/g, (tag) => {
     for (const [marker, attr] of attrs) {
       const m = tag.match(new RegExp("\\b" + marker + '="([^"]+)"'));

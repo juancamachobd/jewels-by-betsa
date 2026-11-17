@@ -28,6 +28,7 @@
     each("data-i18n-ph", function(el, v){ el.setAttribute("placeholder", v); });
     each("data-i18n-alt", function(el, v){ el.setAttribute("alt", v); });
     each("data-i18n-aria", function(el, v){ el.setAttribute("aria-label", v); });
+    each("data-i18n-href", function(el, v){ el.setAttribute("href", v); });
   }
   applyTexts();
 
@@ -151,6 +152,20 @@
   navLinks.querySelectorAll("a").forEach(function(a){
     a.addEventListener("click", function(){ navLinks.classList.remove("open"); });
   });
+
+  /* ---------- Sticky "customize" bar on phones ----------
+     Shown once the visitor scrolls past the top of the page; hidden
+     while the form itself or the footer is on screen. */
+  var sticky = document.getElementById("stickyCta");
+  if(sticky && "IntersectionObserver" in window){
+    var seen = {};
+    var watch = [document.querySelector(".hero"), document.getElementById("personaliza"), document.querySelector("footer")];
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ seen[watch.indexOf(e.target)] = e.isIntersecting; });
+      sticky.classList.toggle("show", !seen[0] && !seen[1] && !seen[2]);
+    });
+    watch.forEach(function(el){ if(el) sio.observe(el); });
+  }
 
   /* ---------- Videos: play only while on screen ---------- */
   var videos = document.querySelectorAll(".video-card video");

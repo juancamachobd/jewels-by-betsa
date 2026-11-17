@@ -2,12 +2,13 @@
   --linen:#EDE3D2;
   --surface:#F8F2E7;
   --ink:#2B2016;
-  --muted:#6E5C49;
+  --muted:#5A4A39;
   --wine:#5C2A38;
   --wine-strong:#4A2129;
   --clay:#AD7440;
   --blush:#E7C0B3;
   --gold:#AE8A47;
+  --gold-text:#7E5F27;
   --border: rgba(43,32,22,.14);
   --divider-bg: var(--linen);
   --shadow: 0 18px 40px -22px rgba(43,20,20,.45);
@@ -23,6 +24,7 @@
     --clay:#D8A06B;
     --blush:#3B2721;
     --gold:#CBA968;
+    --gold-text:#CBA968;
     --border: rgba(242,231,216,.16);
     --divider-bg: var(--linen);
     --shadow: 0 18px 44px -20px rgba(0,0,0,.65);
@@ -38,6 +40,7 @@
   --clay:#D8A06B;
   --blush:#3B2721;
   --gold:#CBA968;
+    --gold-text:#CBA968;
   --border: rgba(242,231,216,.16);
   --divider-bg: var(--linen);
   --shadow: 0 18px 44px -20px rgba(0,0,0,.65);
@@ -253,11 +256,13 @@ section.tight{padding:56px 0;}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step;}
 .step{position:relative;padding:28px 22px 22px;background:var(--surface);border:1px solid var(--border);border-radius:4px;}
 .step .num{
-  font-family:'Fraunces',serif;font-style:italic;font-size:2.4rem;color:var(--gold);line-height:1;display:block;margin-bottom:10px;
+  font-family:'Fraunces',serif;font-style:italic;font-size:2.4rem;color:var(--gold-text);line-height:1;display:block;margin-bottom:10px;
 }
 .step h3{font-size:1.08rem;margin-bottom:8px;}
 .step p{margin:0;color:var(--muted);font-size:.92rem;}
 .order-cta{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.order-alt{margin:16px 0 0;text-align:center;color:var(--muted);font-size:.9rem;}
+.order-alt a{font-weight:700;color:var(--ink);}
 @media (max-width:860px){.steps{grid-template-columns:1fr;}}
 
 /* ---------- Custom order form ---------- */
@@ -281,17 +286,18 @@ section.tight{padding:56px 0;}
 .type-card:has(input:focus-visible){outline:2px solid var(--wine);outline-offset:3px;}
 .type-name{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.1rem;color:var(--ink);}
 .type-note{font-size:.86rem;color:var(--muted);}
+.form-hint{margin:0 0 20px;color:var(--muted);font-size:.9rem;}
 .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 22px;}
 .field-wide{grid-column:1 / -1;}
 .field label{display:flex;align-items:baseline;gap:9px;font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:7px;}
-.field-num{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:1.25rem;color:var(--gold);line-height:1;}
+.field-num{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:500;font-size:1.25rem;color:var(--gold-text);line-height:1;}
 .field input,.field textarea{
   width:100%;font:inherit;font-size:.95rem;color:var(--ink);background:var(--linen);
   border:1.5px solid var(--border);border-radius:3px;padding:.7rem .85rem;resize:vertical;
 }
 .field textarea{min-height:4.6rem;}
 #cf-otros{min-height:7.5rem;}
-.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:.75;}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:1;}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--wine);}
 .field input.invalid{border-color:#B3261E;}
 .contact-grid{margin-top:28px;padding-top:28px;border-top:1px solid var(--border);}
@@ -358,4 +364,25 @@ footer a.ig{
 @media (prefers-reduced-motion: no-preference){
   [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
   [data-reveal].in{opacity:1;transform:none;}
+}
+
+/* ---------- Phones: looser verse banner + sticky "customize" bar ---------- */
+@media (max-width:640px){
+  .verse-band blockquote{letter-spacing:.012em;line-height:1.45;}
+}
+.sticky-cta{display:none;}
+@media (max-width:640px){
+  .sticky-cta{
+    display:block;position:fixed;left:0;right:0;bottom:0;z-index:45;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    background:color-mix(in srgb, var(--linen) 92%, transparent);
+    backdrop-filter:blur(10px);border-top:1px solid var(--border);
+    transform:translateY(110%);visibility:hidden;
+    transition:transform .25s ease, visibility 0s linear .25s;
+  }
+  .sticky-cta.show{transform:none;visibility:visible;transition:transform .25s ease, visibility 0s;}
+  .sticky-cta .btn{width:100%;justify-content:center;padding:.75rem 1rem;}
+}
+@media (max-width:640px) and (prefers-reduced-motion: reduce){
+  .sticky-cta,.sticky-cta.show{transition:none;}
 }
