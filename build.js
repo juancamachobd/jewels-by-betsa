@@ -49,7 +49,7 @@ function seoBlock(lang) {
     name: "Jewels by Betsa",
     url: SITE + "/",
     logo: SITE + "/images/logo.jpg",
-    image: SITE + "/images/pulseras.jpg",
+    image: SITE + "/images/og-jewels-by-betsa.jpg",
     description: t("meta.desc"),
     sameAs: ["https://www.instagram.com/jewelsbybetsa/"],
   };
@@ -63,7 +63,7 @@ function seoBlock(lang) {
     `<meta property="og:site_name" content="Jewels by Betsa">`,
     `<meta property="og:title" content="${escAttr(t("meta.title"))}">`,
     `<meta property="og:description" content="${escAttr(t("meta.desc"))}">`,
-    `<meta property="og:image" content="${SITE}/images/pulseras.jpg">`,
+    `<meta property="og:image" content="${SITE}/images/og-jewels-by-betsa.jpg">`,
     `<meta property="og:url" content="${lang.url}">`,
     `<meta property="og:locale" content="${lang.locale}">`,
     `<script type="application/ld+json">${JSON.stringify(org).replace(/</g, "\\u003c")}</script>`,
