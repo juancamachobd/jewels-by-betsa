@@ -215,11 +215,21 @@ section.tight{padding:56px 0;}
 @media (max-width:560px){.grid-collection{grid-template-columns:1fr;}}
 
 /* ---------- Video / motion grid ---------- */
-.grid-video{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.video-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:var(--shadow);}
+.grid-video{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+.video-card{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:var(--shadow);}
 .video-card video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#150f0c;}
-.video-card figcaption{padding:12px 14px;font-size:.85rem;color:var(--muted);font-weight:600;text-align:center;}
-@media (max-width:860px){.grid-video{grid-template-columns:1fr;max-width:340px;margin:0 auto;}}
+.video-card figcaption{padding:10px 8px;font-size:.8rem;color:var(--muted);font-weight:600;text-align:center;}
+@media (max-width:980px){.grid-video{grid-template-columns:repeat(3,1fr);gap:18px;}}
+/* Phones: one row you swipe sideways, with the next clip peeking in */
+@media (max-width:640px){
+  .grid-video{
+    display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin:0 -28px;padding:4px 28px 18px;scroll-padding:0 28px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  }
+  .grid-video::-webkit-scrollbar{display:none;}
+  .video-card{flex:0 0 62%;scroll-snap-align:start;box-shadow:none;}
+}
 
 /* ---------- Faith / story ---------- */
 .faith{background:var(--blush);}

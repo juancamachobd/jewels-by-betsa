@@ -152,10 +152,24 @@
     a.addEventListener("click", function(){ navLinks.classList.remove("open"); });
   });
 
-  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    document.querySelectorAll(".video-card video").forEach(function(v){
-      v.removeAttribute("autoplay"); v.pause(); v.setAttribute("controls","");
-    });
+  /* ---------- Videos: play only while on screen ---------- */
+  var videos = document.querySelectorAll(".video-card video");
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduceMotion || !("IntersectionObserver" in window)){
+    videos.forEach(function(v){ v.setAttribute("controls", ""); });
+  } else {
+    var vio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var v = e.target;
+        if(e.isIntersecting){
+          var p = v.play();
+          if(p && p.catch) p.catch(function(){ v.setAttribute("controls", ""); });
+        } else {
+          v.pause();
+        }
+      });
+    }, {threshold:.5});
+    videos.forEach(function(v){ vio.observe(v); });
   }
 
   if("IntersectionObserver" in window){
