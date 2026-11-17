@@ -299,11 +299,15 @@
       <div class="section-head center">
         <p class="kicker" data-i18n="pay.kicker">FORMAS DE PAGO</p>
         <h2 data-i18n="pay.title">Cómo pagar</h2>
-        <p data-i18n="pay.body">Primero confirma tu pedido y el precio con Betsa; después puedes pagar con PayPal. Zelle y tarjeta llegan pronto.</p>
+        <p data-i18n="pay.body">Primero confirma tu pedido y el precio con Betsa; después puedes pagar con Zelle o PayPal. El pago con tarjeta llega pronto.</p>
       </div>
       <!-- Placeholder only — wire real payment links/buttons here when ready (e.g. Zelle QR, PayPal.me link, Stripe payment link). -->
       <div class="pay-methods">
-        <div class="pay-card"><div class="method">Zelle</div><span class="soon" data-i18n="pay.soon">Próximamente</span></div>
+        <a class="pay-card pay-card-live pay-card-qr" href="https://enroll.zellepay.com/qr-codes?data=ewogICJuYW1lIiA6ICJKVUFOIiwKICAidG9rZW4iIDogIjMyMTQ0NzAxMzUiLAogICJhY3Rpb24iIDogInBheW1lbnQiCn0=" target="_blank" rel="noopener">
+          <div class="method">Zelle</div>
+          <img class="zelle-qr" src="images/zelle-qr.png" width="600" height="600" alt="Código QR de Zelle para pagar a Jewels by Betsa" data-i18n-alt="alt.zelle">
+          <span class="pay-note" data-i18n="pay.zelle.note">Escanea el código con la app de tu banco, o tócalo desde tu celular.</span>
+        </a>
         <a class="pay-card pay-card-live" href="https://paypal.me/juancamachobd" target="_blank" rel="noopener"><div class="method">PayPal</div><span class="pay-go" data-i18n="pay.paypal.cta">Pagar con PayPal ↗</span></a>
         <div class="pay-card"><div class="method" data-i18n="pay.card">Tarjeta</div><span class="soon" data-i18n="pay.soon">Próximamente</span></div>
       </div>

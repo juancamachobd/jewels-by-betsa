@@ -47,6 +47,6 @@ only appears when its contact detail is filled in.
 - [x] SEO: separate Spanish/English pages with hreflang, sitemap, Organization markup
 - [ ] Register the site in Google Search Console and submit sitemap.xml
 - [ ] Product markup (needs the priced catalog)
-- [x] Payments: PayPal.me link
-- [ ] Payments: Zelle QR, Stripe Payment Link for cards
+- [x] Payments: PayPal.me link, Zelle QR
+- [ ] Payments: Stripe Payment Link for cards
 - [ ] Products in a data file (add a piece without editing HTML)
